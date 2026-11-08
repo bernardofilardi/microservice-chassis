@@ -1,0 +1,17 @@
+spring:
+  threads:
+    virtual:
+      enabled:
+        true
+  datasource:
+    url: jdbc:h2:mem:testdb;DB\_CLOSE\_DELAY=-1;DB\_CLOSE\_ON\_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform:
+      org.hibernate.dialect.H2Dialect hibernate:
+        ddl-auto:
+          create-drop
+  flyway:
+    enabled: false
